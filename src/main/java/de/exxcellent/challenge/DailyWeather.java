@@ -14,4 +14,8 @@ public class DailyWeather {
 	public int difference() {
 		return maxToday-minToday;
 	}
+
+	public int getDay() {
+		return day;
+	}
 }

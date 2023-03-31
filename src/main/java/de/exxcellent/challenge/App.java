@@ -19,8 +19,10 @@ public final class App {
     	CSVReader weather = new CSVReader("src/main/resources/de/exxcellent/challenge/weather.csv");
 		List<List<String>> records = weather.getContent();
 		System.out.println(records);
+		
+		MinDailyWeatherDifferenceAnalyzer weatherMinDiffCall = new MinDailyWeatherDifferenceAnalyzer(records, 0, 1, 2);
 
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        int dayWithSmallestTempSpread = weatherMinDiffCall.getDayWithSmallestTempSpread();     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
