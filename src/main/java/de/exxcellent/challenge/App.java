@@ -1,5 +1,7 @@
 package de.exxcellent.challenge;
 
+import java.util.List;
+
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
  * design. Read: create your own classes and packages as appropriate.
@@ -14,7 +16,9 @@ public final class App {
      */
     public static void main(String... args) {
 
-        // Your preparation code …
+    	CSVReader weather = new CSVReader("src/main/resources/de/exxcellent/challenge/weather.csv");
+		List<List<String>> records = weather.getContent();
+		System.out.println(records);
 
         String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
