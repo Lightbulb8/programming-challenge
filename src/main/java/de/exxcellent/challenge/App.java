@@ -17,10 +17,10 @@ public final class App {
     public static void main(String... args) {
 
     	FileReader weatherDataReader = new CSVReader("src/main/resources/de/exxcellent/challenge/weather.csv");
-		List<List<String>> weatherData = weatherDataReader.getRowsFromFile();		
-		MinDailyWeatherDifferenceAnalyzer weatherMinDiffCall = new MinDailyWeatherDifferenceAnalyzer(weatherData, 0, 1, 2);
+		List<List<String>> weatherData = weatherDataReader.getRowsFromFile();
+		List<DailyWeather> weatherList = DailyWeatherMapper.convertCSVtoDailyWeather(weatherData,0,1,2);
 
-        int dayWithSmallestTempSpread = weatherMinDiffCall.getDayWithSmallestTempSpread();     // Your day analysis function call …
+        int dayWithSmallestTempSpread = MinDailyWeatherDifferenceAnalyzer.getDayWithSmallestTempSpread(weatherList);     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …

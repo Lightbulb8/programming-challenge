@@ -2,23 +2,20 @@ package de.exxcellent.challenge;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class MinDailyWeatherDifferenceAnalyzerTest {
-	MinDailyWeatherDifferenceAnalyzer weatherAnalyzer;
-	@BeforeEach
-	void setup() {
-		CSVReader reader = new CSVReader("src/main/resources/de/exxcellent/challenge/test.csv");
-		List<List<String>> testData = reader.getRowsFromFile();
-		weatherAnalyzer = new MinDailyWeatherDifferenceAnalyzer(testData,0,1,2);
-	}
 
 	@Test
 	void test() {
-		assertEquals(2, weatherAnalyzer.getDayWithSmallestTempSpread());
+		List<DailyWeather> testData = new ArrayList<>();
+		testData.add(new DailyWeather(1,22,15));
+		testData.add(new DailyWeather(2,30,20));
+		testData.add(new DailyWeather(3,25,22));
+		assertEquals(3, MinDailyWeatherDifferenceAnalyzer.getDayWithSmallestTempSpread(testData));
 	}
 
 }
