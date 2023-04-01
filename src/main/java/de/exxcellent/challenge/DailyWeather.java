@@ -2,7 +2,7 @@ package de.exxcellent.challenge;
 
 import java.util.Objects;
 
-public class DailyWeather {
+public class DailyWeather implements Callculator {
 	public String day;
 	public int maxToday;
 	public int minToday;
@@ -35,6 +35,8 @@ public class DailyWeather {
 		if (getClass() != obj.getClass())
 			return false;
 		DailyWeather other = (DailyWeather) obj;
-		return day == other.day && maxToday == other.maxToday && minToday == other.minToday;
+		return Objects.equals(day, other.day) && maxToday == other.maxToday && minToday == other.minToday;
 	}
+
+
 }
