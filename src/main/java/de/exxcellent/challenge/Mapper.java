@@ -14,5 +14,14 @@ public class Mapper {
 		return weatherList;
 	}
 	
+	public static List<Callculator> convertCSVtoFootballClub(List<List<String>> csvFile, int columnClubName, int columnGoalsScored, int columnGoalsAllowed) {
+		List<Callculator> clubList = new ArrayList<>();
+		for(int i = 1; i<csvFile.size();i++) {
+			List<String> line = csvFile.get(i);
+			clubList.add(new FootballClub(line.get(columnClubName), Integer.parseInt(line.get(columnGoalsScored)), Integer.parseInt(line.get(columnGoalsAllowed))));
+		}
+		return clubList;
+	}
+	
 
 }

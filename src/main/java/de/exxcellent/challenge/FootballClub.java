@@ -1,5 +1,7 @@
 package de.exxcellent.challenge;
 
+import java.util.Objects;
+
 public class FootballClub implements Callculator{
 	public String clubName;
 	public int goalsScored;
@@ -18,4 +20,24 @@ public class FootballClub implements Callculator{
 	public String getID() {
 		return clubName;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(clubName, goalsAllowed, goalsScored);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		FootballClub other = (FootballClub) obj;
+		return Objects.equals(clubName, other.clubName) && goalsAllowed == other.goalsAllowed
+				&& goalsScored == other.goalsScored;
+	}
+	
+	
 }
