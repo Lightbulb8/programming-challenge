@@ -7,13 +7,13 @@ import java.util.List;
 public class MinDailyWeatherDifferenceAnalyzer {
 
 	
-	public static int getDayWithSmallestTempSpread(List<DailyWeather> weatherList) {
+	public static String getDayWithSmallestTempSpread(List<DailyWeather> weatherList) {
 		List<Integer> diffMinMax = new ArrayList<>();
 		for(int i = 0; i<weatherList.size(); i++){
 			diffMinMax.add(weatherList.get(i).difference());
 		}
 		int minIndex = diffMinMax.indexOf(Collections.min(diffMinMax));
-		return weatherList.get(minIndex).getDay();
+		return weatherList.get(minIndex).getID();
 	}
 	
 	

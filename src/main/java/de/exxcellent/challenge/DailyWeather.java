@@ -3,11 +3,11 @@ package de.exxcellent.challenge;
 import java.util.Objects;
 
 public class DailyWeather {
-	public int day;
+	public String day;
 	public int maxToday;
 	public int minToday;
 	
-	public DailyWeather(int day, int maxToday, int minToday) {
+	public DailyWeather(String day, int maxToday, int minToday) {
 		this.day = day;
 		this.maxToday = maxToday;
 		this.minToday = minToday;
@@ -17,7 +17,7 @@ public class DailyWeather {
 		return maxToday-minToday;
 	}
 
-	public int getDay() {
+	public String getID() {
 		return day;
 	}
 

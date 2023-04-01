@@ -9,7 +9,7 @@ public class DailyWeatherMapper {
 		List<DailyWeather> weatherList = new ArrayList<>();
 		for(int i = 1; i<csvFile.size();i++) {
 			List<String> line = csvFile.get(i);
-			weatherList.add(new DailyWeather(Integer.parseInt(line.get(columnDay)), Integer.parseInt(line.get(columnMax)), Integer.parseInt(line.get(columnMin))));
+			weatherList.add(new DailyWeather(line.get(columnDay), Integer.parseInt(line.get(columnMax)), Integer.parseInt(line.get(columnMin))));
 		}
 		return weatherList;
 	}

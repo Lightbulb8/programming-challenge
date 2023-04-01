@@ -8,7 +8,7 @@ class DailyWeatherTest {
 
 	@Test
 	void test() {
-		DailyWeather day = new DailyWeather(2,20,12);
+		DailyWeather day = new DailyWeather("2",20,12);
 		assertEquals(8,day.difference());
 	}
 
