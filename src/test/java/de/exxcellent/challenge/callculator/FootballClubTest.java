@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class FootballClubTest {
 
 	@Test
-	void test() {
+	void testDifference() {
 		FootballClub club = new FootballClub("BVB",40,10);
 		assertEquals(30, club.difference());
 	}
