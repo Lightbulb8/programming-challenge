@@ -22,8 +22,12 @@ public final class App {
 
         String dayWithSmallestTempSpread = MinDifferenceAnalyzer.getMinDifference(weatherList);     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
-
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
+        
+        FileReader footballDataReader = new CSVReader("src/main/resources/de/exxcellent/challenge/football.csv");
+        List<List<String>> footballData = footballDataReader.getRowsFromFile();
+        List<Callculator> footballList = Mapper.convertCSVtoFootballClub(footballData, 0, 5, 6);
+        
+        String teamWithSmallestGoalSpread = MinDifferenceAnalyzer.getMinDifference(footballList); // Your goal analysis function call …
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
 }
