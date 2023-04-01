@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.mapper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import de.exxcellent.challenge.callculator.Callculator;
+import de.exxcellent.challenge.callculator.DailyWeather;
+import de.exxcellent.challenge.callculator.FootballClub;
+import de.exxcellent.challenge.fileReader.CSVReader;
+import de.exxcellent.challenge.fileReader.FileReader;
 
 class MapperTest {
 

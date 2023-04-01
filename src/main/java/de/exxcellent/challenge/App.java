@@ -2,6 +2,12 @@ package de.exxcellent.challenge;
 
 import java.util.List;
 
+import de.exxcellent.challenge.callculator.Callculator;
+import de.exxcellent.challenge.fileReader.CSVReader;
+import de.exxcellent.challenge.fileReader.FileReader;
+import de.exxcellent.challenge.mapper.Mapper;
+import de.exxcellent.challenge.minDifferenceAnalyzer.MinDifferenceAnalyzer;
+
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
  * design. Read: create your own classes and packages as appropriate.

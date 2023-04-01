@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.callculator;
 
 public interface Callculator {
 	public int difference();

@@ -1,4 +1,4 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.fileReader;
 
 import java.io.File;
 import java.io.FileNotFoundException;

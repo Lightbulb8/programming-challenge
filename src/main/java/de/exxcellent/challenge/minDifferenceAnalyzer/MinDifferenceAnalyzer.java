@@ -1,8 +1,12 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.minDifferenceAnalyzer;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import de.exxcellent.challenge.callculator.Callculator;
+
+
 
 public class MinDifferenceAnalyzer {
 

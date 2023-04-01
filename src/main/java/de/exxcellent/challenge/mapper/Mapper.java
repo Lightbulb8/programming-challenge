@@ -1,7 +1,13 @@
-package de.exxcellent.challenge;
+package de.exxcellent.challenge.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import de.exxcellent.challenge.callculator.Callculator;
+import de.exxcellent.challenge.callculator.DailyWeather;
+import de.exxcellent.challenge.callculator.FootballClub;
+
+
 
 public class Mapper {
 	
