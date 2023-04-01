@@ -12,7 +12,7 @@ class MinDailyWeatherDifferenceAnalyzerTest {
 	@BeforeEach
 	void setup() {
 		CSVReader reader = new CSVReader("src/main/resources/de/exxcellent/challenge/test.csv");
-		List<List<String>> testData = reader.getContent();
+		List<List<String>> testData = reader.getRowsFromFile();
 		weatherAnalyzer = new MinDailyWeatherDifferenceAnalyzer(testData,0,1,2);
 	}
 

@@ -22,7 +22,7 @@ class CSVReaderTest {
 									Arrays.asList("1", "41", "2"),
 									Arrays.asList("2", "30", "10"),
 									Arrays.asList("3", "20", "0"));
-		assertEquals(test, reader.getContent());
+		assertEquals(test, reader.getRowsFromFile());
 	}
 
 }

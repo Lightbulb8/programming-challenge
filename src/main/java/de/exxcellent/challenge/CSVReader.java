@@ -6,18 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CSVReader {
+public class CSVReader implements FileReader {
 	public String csvPath;
 	
 	public CSVReader(String csvpath) {
 		this.csvPath = csvpath;
 	}
 	
-	public List<List<String>> getContent() {
+	public List<List<String>> getRowsFromFile() {
 		List<List<String>> records = new ArrayList<>();
 		try (Scanner scanner = new Scanner(new File(csvPath));) {
 		    while (scanner.hasNextLine()) {
-		        records.add(getRecordFromLine(scanner.nextLine()));
+		        records.add(splitLineAtSeperator(scanner.nextLine()));
 		    }
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found at path: " + this.csvPath);
@@ -25,7 +25,7 @@ public class CSVReader {
 		return records;
 	}
 	
-	private List<String> getRecordFromLine(String line) {
+	private List<String> splitLineAtSeperator(String line) {
 		List<String> values = new ArrayList<String>();
 	    Scanner rowScanner = new Scanner(line);
 		rowScanner.useDelimiter(",");
